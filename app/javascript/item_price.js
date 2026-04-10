@@ -14,4 +14,4 @@ function calcPrice (){
 };
 
 window.addEventListener('turbo:load', calcPrice);
-
+window.addEventListener("turbo:render", calcPrice);
