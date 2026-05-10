@@ -27,6 +27,10 @@ set :keep_releases, 5
 set :bundle_path, -> { shared_path.join('vendor/bundle') }
 set :bundle_env_variables, { 'BUNDLE_FORCE_RUBY_PLATFORM' => 'true' }
 
+set :default_env, {
+  'BUNDLE_FORCE_RUBY_PLATFORM' => 'true'
+}
+
 # デプロイ処理が終わった後、Unicornを再起動するための記述
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
